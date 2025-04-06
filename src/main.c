@@ -1,9 +1,5 @@
 /*
  * Memory Matching Game
- *
- * A simple memory game using raylib.
- * Global variables are used for simplicity.
- *
  * References:
  * - GeeksforGeeks (2025): Fisher-Yates Shuffle Algorithm. https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
  * - Krazydad (no date): How to make colors from numbers. https://krazydad.com/tutorials/makecolors.php
@@ -65,7 +61,7 @@
  bool showNewHighScore = false;
  float newHighScoreTimer = 0.0f;
  
- // Level-specific settings
+ // Level-specific settings from level 1-10
  LevelConfig levelConfigs[MAX_LEVEL + 1] = {
      {0, 0, 0, 0},
      {4, 60.0f, 3.5f, 18},
@@ -120,7 +116,7 @@
  /*
   * MakeRainbowColor
   *
-  * Creates animated RGB color using sine wave offsets
+  * Creates animated RGB color using sine wave offsets so a cool animation is created and to ensure that each wave peaks at a different time ensuring a smooth transition between colors
   */
  Color MakeRainbowColor(float time) {
      float r = sin(time * RAINBOW_SPEED) * 0.5f + 0.5f;
@@ -292,7 +288,7 @@
             gameTime += deltaTime;
 
             BeginDrawing();
-            // Background gradient
+            // Background gradient blue to black
             Rectangle bgRec = { 0, 0, 512, 512 };
             DrawRectangleGradientEx(bgRec, DARKBLUE, BLUE, BLACK, DARKGRAY);
 
