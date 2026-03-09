@@ -1,9 +1,4 @@
 # POP Raylib starter
-
-Simple starter application for POP C assignment.
-
-Please see materials on Blackboard for more details.
-
 # Building
 
 To build run the command:
